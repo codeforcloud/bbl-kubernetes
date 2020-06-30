@@ -2,27 +2,41 @@
 
 ----
 
+### Kubernetes concepts
+
+Kubernetes est un orchestrateur de containers. Son rôle est de faire tourner des containers dans un cluster
+
+----
+
+### Qu'est-ce que Kubernetes peut faire ?
+
+- Démarrer 5 containers de l'image ```spring-projects/spring-petclinic:2.3.1```
+- Mettre un load-balancer interne devant ces containers
+- Démarrer 10 containers de l'image ```elasticsearch/elasticsearch:7.7.0```
+- Mettre un load-balancer externe devant ces containers
+- Faire grossir le cluster et ajouter des containers pour lisser une charge grandissante
+- Déployer une nouvelle release, par exemple ```elasticsearch/elasticsearch:7.8.0```
+- Continuer à répondre aux requêtes durant la mise à jour
+
+----
+
+### Ce que Kubernetes peut aussi faire ?
+
+- Auto-scaling basique
+- Blue/green deployment, Canary deployment
+- Batch jobs, mais aussi des services longs
+- Faire tourner des services stateful (bases de données, etc.)
+- Gérer finement les droits : *qui* peut faire *quoi* sur *quelles* ressources
+- Intégrer des services externes (catalogue de services)
+- Automatiser des opérations complexes (operators)
+
+----
+
 ### Orchestrateur de containers
 
 Afin de garantir qu'un container fonctionne, il est nécessaire d'avoir un orchestrateur de container
 
 Celui-ci garanti que le container est toujours en fonctionnement, même si les noeuds du cluster se mettent à jour ou tombent en panne
-
-----
-
-### Docker Swarm
-
-Docker Swarm est l'orchestrateur par défaut de Docker
-
-Il est inclus dans le moteur et simple d'utilisation
-
-Cependant, il ne répond pas à des contraintes de production
-
-----
-
-### Docker Swarm
-
-![Image](https://cdn-images-1.medium.com/max/1207/1*PYC_TkhBjc0vtaPjjrg6MQ.png)
 
 ----
 
