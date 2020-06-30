@@ -56,9 +56,42 @@ Celui-ci garanti que le container est toujours en fonctionnement, même si les n
 
 ----
 
-### Kubernetes
+### Kubernetes architecture
 
 ![Image](https://d33wubrfki0l68.cloudfront.net/7016517375d10c702489167e704dcb99e570df85/7bb53/images/docs/components-of-kubernetes.png)
+
+----
+
+### Kubernetes architecture : les noeuds
+
+Les noeuds qui exécutent les containers font tourner une collection de service :
+- un moteur de container (généralement Docker)
+- kubelet (l'agent)
+- kube-proxy (un service de gestion du réseau)
+
+----
+
+### Kubernetes architecture : le "plan de contrôle"
+
+Le "maître" est le cerveau de Kubernetes. Il fait tourner plusieurs services :
+- l'API server (le point d'entrée pour tout !)
+- les services principaux comme le *scheduler* et le *control manager*
+- ```etc``` (une base de données distribuée, la BDD de Kubernetes)
+
+----
+
+### Les ressources de Kubernetes
+
+L'API de Kubernetes définit beaucoup d'objets appelés des *ressources*
+
+Ces ressources sont organisés par type, appelé des ```Kind``` (dans l'API)
+
+Quelques exemples de ressources :
+- ```node``` : une machine physique ou virtuel dans le cluster
+- ```pod``` : un groupe de container tournant sur le même noeud
+- ```service``` : un point d'accès pour se connecter à un ou plusieurs pods
+- ```namespace``` : une isolation des ressources
+- ```secret``` : un groupe de données sensibles
 
 ----
 
@@ -67,12 +100,6 @@ Celui-ci garanti que le container est toujours en fonctionnement, même si les n
 Un pod est un regroupement de container au sein d'une même unité
 
 <img src="https://d33wubrfki0l68.cloudfront.net/5cb72d407cbe2755e581b6de757e0d81760d5b86/a9df9/docs/tutorials/kubernetes-basics/public/images/module_03_nodes.svg" width="50%" />
-
-----
-
-### Horizontal pod autoscaler
-
-Lorsqu'une demande est faite de scaler les pods, HPA s'occupe de démarrer les pods sur les noeuds correspondant, respectant les contraintes imposées
 
 ----
 
@@ -92,7 +119,7 @@ Un service est la manière d'accéder aux pods
 
 Un service expose une adresse IP, ainsi qu'un port
 
-Il joue le role de load-balancer
+Il joue le role de load-balancer interne
 
 <img src="https://d33wubrfki0l68.cloudfront.net/cc38b0f3c0fd94e66495e3a4198f2096cdecd3d5/ace10/docs/tutorials/kubernetes-basics/public/images/module_04_services.svg" width="30%" />
 
@@ -102,7 +129,7 @@ Il joue le role de load-balancer
 
 L'ingress sert à exposer à l'extérieur du cluster un service
 
-Cela se représente traditionnellement par un load balancer, une URL ainsi que du SSL
+Cela se représente traditionnellement par un load balancer externe, une URL ainsi que du SSL
 
 ----
 
