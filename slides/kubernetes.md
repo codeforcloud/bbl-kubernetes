@@ -14,6 +14,11 @@ Kubernetes est un orchestrateur de containers. Son rôle est de faire tourner de
 - Mettre un load-balancer interne devant ces containers
 - Démarrer 10 containers de l'image ```elasticsearch/elasticsearch:7.7.0```
 - Mettre un load-balancer externe devant ces containers
+
+----
+
+### Qu'est-ce que Kubernetes peut faire ?
+
 - Faire grossir le cluster et ajouter des containers pour lisser une charge grandissante
 - Déployer une nouvelle release, par exemple ```elasticsearch/elasticsearch:7.8.0```
 - Continuer à répondre aux requêtes durant la mise à jour
@@ -25,6 +30,11 @@ Kubernetes est un orchestrateur de containers. Son rôle est de faire tourner de
 - Auto-scaling basique
 - Blue/green deployment, Canary deployment
 - Batch jobs, mais aussi des services longs
+
+----
+
+### Ce que Kubernetes peut aussi faire ?
+
 - Faire tourner des services stateful (bases de données, etc.)
 - Gérer finement les droits : *qui* peut faire *quoi* sur *quelles* ressources
 - Intégrer des services externes (catalogue de services)
@@ -40,9 +50,15 @@ Celui-ci garanti que le container est toujours en fonctionnement, même si les n
 
 ----
 
+### Kubernetes architecture
+
+![Image](https://training.codeforcloud.tech/images/k8s-arch1.png)
+
+----
+
 ### Kubernetes
 
-![Image](https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Kubernetes.png/600px-Kubernetes.png)
+![Image](https://d33wubrfki0l68.cloudfront.net/7016517375d10c702489167e704dcb99e570df85/7bb53/images/docs/components-of-kubernetes.png)
 
 ----
 
