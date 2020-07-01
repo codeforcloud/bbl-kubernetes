@@ -52,7 +52,7 @@ Celui-ci garanti que le container est toujours en fonctionnement, même si les n
 
 ### Kubernetes architecture
 
-<img src="https://training.codeforcloud.tech/images/k8s-arch1.png" width="70%" />
+<img src="https://training.codeforcloud.tech/images/k8s-arch1.png" width="45%" />
 
 ----
 
@@ -137,10 +137,7 @@ Cela se représente traditionnellement par un load balancer externe, une URL ain
 
 ----
 
-### Cluster autoscaler
-
-Il sert à augmenter le nombre de noeuds du cluster automatiquement quand celui-ci n'a plus assez de ressource, ou que les noeuds sont sous utilisés
-
+## La gestion de la données
 ----
 
 ### Daemonset
@@ -170,6 +167,10 @@ Basé sur un système de plugin (iSCSI, NFS, ...)
 Requête de stockage par l'utilisateur qui va se greffer sur un PV
 
 Demandée par un pod
+
+----
+
+## Gestion de configuration
 
 ----
 
@@ -222,16 +223,17 @@ Pour interagir avec Kubernetes, il existe une CLI ```kubectl```
 
 ### Interagir avec Kubernetes
 
-- kubectl get pods : voir tous les pods sur le cluster
-- kubectl get ns : voir tous les namespaces
-- kubectl logs -l ... --tail N -f : voir les logs d'un objet
-- kubectl scale ... --replicas 8 : augmenter le nombre de réplicas d'un pod
+- ```kubectl get pods``` : voir tous les pods sur le cluster
+- ```kubectl get ns``` : voir tous les namespaces
+- ```kubectl logs -l ... --tail N -f``` : voir les logs d'un objet
+- ```kubectl scale ... --replicas 8``` : augmenter le nombre de réplicas d'un pod
 
 ----
 
 ### Offres managés cloud
 
 La plupart des CSP offrent aujourd'hui des Kubernetes managés, comme par exemple AKS, EKS, GKE
+
 ----
 
 ## Déploiement avec Kubernetes
