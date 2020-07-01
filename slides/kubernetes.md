@@ -86,6 +86,10 @@ L'API de Kubernetes définit beaucoup d'objets appelés des *ressources*
 
 Ces ressources sont organisés par type, appelé des ```Kind``` (dans l'API)
 
+----
+
+### Les ressources de Kubernetes
+
 Quelques exemples de ressources :
 - ```node``` : une machine physique ou virtuel dans le cluster
 - ```pod``` : un groupe de container tournant sur le même noeud
@@ -205,6 +209,14 @@ data:
   username: YWRtaW4=
   password: MWYyZDFlMmU2N2Rm
 ```
+
+----
+
+### Interagir avec Kubernetes
+
+Pour interagir avec Kubernetes, il existe une CLI ```kubectl```
+
+```kubectl``` intègre un certain nombres de commandes pour 
 
 ----
 
