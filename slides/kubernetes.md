@@ -138,6 +138,15 @@ Cela se représente traditionnellement par un load balancer externe, une URL ain
 ----
 
 ## La gestion de la données
+
+----
+
+### Statefulset
+
+Un statefulset agit comme un déploiement, mais garanti pour chaque pod qu'un volume est associé
+
+Beaucoup utilisé lorsqu'il faut stocker de la données par exemple pour les bases de données
+
 ----
 
 ### Daemonset
@@ -213,6 +222,10 @@ data:
 
 ----
 
+## Premier contact avec Kubernetes
+
+----
+
 ### Interagir avec Kubernetes
 
 Pour interagir avec Kubernetes, il existe une CLI ```kubectl```
@@ -237,6 +250,34 @@ La plupart des CSP offrent aujourd'hui des Kubernetes managés, comme par exempl
 ----
 
 ## Déploiement avec Kubernetes
+
+----
+
+### Exemple de fichier yaml
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+```
 
 ----
 
