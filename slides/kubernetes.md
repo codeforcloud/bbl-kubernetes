@@ -216,7 +216,16 @@ data:
 
 Pour interagir avec Kubernetes, il existe une CLI ```kubectl```
 
-```kubectl``` intègre un certain nombres de commandes pour 
+```kubectl``` intègre un certain nombres de commandes pour voir les ressources du cluster
+
+----
+
+### Interagir avec Kubernetes
+
+- kubectl get pods : voir tous les pods sur le cluster
+- kubectl get ns : voir tous les namespaces
+- kubectl logs -l ... --tail N -f : voir les logs d'un objet
+- kubectl scale ... --replicas 8 : augmenter le nombre de réplicas d'un pod
 
 ----
 
