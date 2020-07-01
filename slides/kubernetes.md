@@ -52,7 +52,7 @@ Celui-ci garanti que le container est toujours en fonctionnement, même si les n
 
 ### Kubernetes architecture
 
-![Image](https://training.codeforcloud.tech/images/k8s-arch1.png)
+<img src="https://training.codeforcloud.tech/images/k8s-arch1.png" width="70%" />
 
 ----
 
@@ -229,6 +229,15 @@ Pour interagir avec Kubernetes, il existe une CLI ```kubectl```
 
 ----
 
+### Offres managés cloud
+
+La plupart des CSP offrent aujourd'hui des Kubernetes managés, comme par exemple AKS, EKS, GKE
+----
+
+## Déploiement avec Kubernetes
+
+----
+
 ### Rolling update
 
 <img src="https://d33wubrfki0l68.cloudfront.net/30f75140a581110443397192d70a4cdb37df7bfc/fa906/docs/tutorials/kubernetes-basics/public/images/module_06_rollingupdates1.svg" width="50%" />
@@ -281,56 +290,58 @@ readinessProbe:
 
 ----
 
+## Day 2 : ops sur Kubernetes
+
+----
+
 ### Logging
-#### Node level
+#### Sur un noeud
 
 ![Image](https://d33wubrfki0l68.cloudfront.net/59b1aae2adcfe4f06270b99a2789012ed64bec1f/4d0ad/images/docs/user-guide/logging/logging-node-level.png)
 
 ----
 
 ### Logging
-#### Node logging agent
+#### Avec un agent
 
 ![Image](https://d33wubrfki0l68.cloudfront.net/2585cf9757d316b9030cf36d6a4e6b8ea7eedf5a/1509f/images/docs/user-guide/logging/logging-with-node-agent.png)
 
 ----
 
 ### Logging
-#### Streaming sidecar container
+#### En streaming
 
 ![Image](https://d33wubrfki0l68.cloudfront.net/c51467e219320fdd46ab1acb40867b79a58d37af/b5414/images/docs/user-guide/logging/logging-with-streaming-sidecar.png)
 
 ----
 
 ### Logging
-#### Sidecar with a logging agent
+#### Avec un sidecar
 
 ![Image](https://d33wubrfki0l68.cloudfront.net/d55c404912a21223392e7d1a5a1741bda283f3df/c0397/images/docs/user-guide/logging/logging-with-sidecar-agent.png)
 
 ----
 
 ### Logging
-#### Exposing log
+#### Exposition des logs
 
 ![Image](https://d33wubrfki0l68.cloudfront.net/0b4444914e56a3049a54c16b44f1a6619c0b198e/260e4/images/docs/user-guide/logging/logging-from-application.png)
 
 ----
 
-### Monitoring and alerting
+### Monitoring et alertes
 
 Le monitoring d'une application se fait avec des outils tierces, comme Prometheus par exemple
 
 ----
 
-### Monitoring and alerting
+### Monitoring et alertes
 
 ![Image](https://camo.githubusercontent.com/37141c73c72e1e73ec0669ae6451d834ebe1cd2e/68747470733a2f2f7777772e63616d696c2e6f72672f636f6e74656e742f696d616765732f323031372f636c75737465722e706e67)
 
 ----
 
-### Offres managés cloud
-
-La plupart des CSP offrent aujourd'hui des Kubernetes managés, comme par exemple AKS, EKS, GKE
+## Installation de services tiers
 
 ----
 
