@@ -245,7 +245,11 @@ Pour interagir avec Kubernetes, il existe une CLI ```kubectl```
 
 ### Offres managés cloud
 
-La plupart des CSP offrent aujourd'hui des Kubernetes managés, comme par exemple AKS, EKS, GKE
+La plupart des CSP offrent aujourd'hui des Kubernetes managés, comme :
+- Azure : AKS
+- GCP : GKE
+- AWS : EKS
+- Mais aussi OVH, Scaleway, AlibabaCloud, IBM, RedHat, ...
 
 ----
 
